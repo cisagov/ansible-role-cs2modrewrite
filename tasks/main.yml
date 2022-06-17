@@ -15,5 +15,5 @@
 
   - name: Install cs2modrewrite
     ansible.builtin.git:
-      repo: "https://github.com/threadexpress/cs2modrewrite.git"
-      dest: '{{playbook_dir}}'
+      repo: "https://github.com/threatexpress/cs2modrewrite.git"
+      dest: '{{playbook_dir}}/cs2modrewrite.py'
