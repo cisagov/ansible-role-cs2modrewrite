@@ -4,4 +4,4 @@
   tasks:
     - name: Include skeleton-ansible-role
       ansible.builtin.include_role:
-        name: skeleton-ansible-role
+        name: skeleton
