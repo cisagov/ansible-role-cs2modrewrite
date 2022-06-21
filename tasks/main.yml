@@ -1,19 +1,14 @@
 ---
-- name: Mod2rewrite Playbook
-  hosts: localhost
-  become: yes
+- name: Install python3
+  ansible.builtin.package:
+    name: python3.9
+    state: present
 
-  tasks:
-  - name: Install python3
-    ansible.builtin.package:
-      name: python3.9
-      state: present
+- name: Install argparse 
+  ansible.builtin.pip:
+    name: argparse
 
-  - name: install argparse 
-    pip:
-      name: argparse
-
-  - name: Install cs2modrewrite
-    ansible.builtin.git:
-      repo: "https://github.com/threatexpress/cs2modrewrite.git"
-      dest: '{{playbook_dir}}/cs2modrewrite.py'
+- name: Install cs2modrewrite
+  ansible.builtin.git:
+    repo: "https://github.com/threatexpress/cs2modrewrite.git"
+    dest: '{{playbook_dir}}/cs2modrewrite.py'
