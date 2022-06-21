@@ -1,9 +1,4 @@
 ---
-- name: Install python3
-  ansible.builtin.package:
-    name: python3.9
-    state: present
-
 - name: Install argparse
   ansible.builtin.pip:
     name: argparse
