@@ -12,3 +12,4 @@
   ansible.builtin.git:
     repo: "https://github.com/threatexpress/cs2modrewrite.git"
     dest: '{{ playbook_dir }}/cs2modrewrite.py'
+    version: main
