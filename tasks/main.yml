@@ -1,4 +1,10 @@
 ---
+-name: Install git
+  ansible.builtin.package:
+    name: git
+    state: present
+    update_cache: yes
+
 - name: Install argparse
   ansible.builtin.pip:
     name: argparse
