@@ -9,7 +9,7 @@
   ansible.builtin.pip:
     name: argparse
   register: argparse_output
-  changed_when: "'Using cached argparse' not in argparse_output.stdout"
+  changed_when: "'Using cached argparse' not in argparse_output.stdout and 'Requirement already satisfied' not in argparse_output.stdout"
 
 - name: Install cs2modrewrite
   ansible.builtin.git:
