@@ -1,19 +1,18 @@
 ---
-- name: Mod2rewrite Playbook
-  hosts: localhost
-  become: yes
+- name: Install git
+  ansible.builtin.package:
+    name: git
+    state: present
+    update_cache: yes
 
-  tasks:
-  - name: Install python3
-    ansible.builtin.package:
-      name: python3.9
-      state: present
+- name: Install argparse
+  ansible.builtin.pip:
+    name: argparse
+  register: argparse_output
+  changed_when: "'Using cached argparse' not in argparse_output.stdout and 'Requirement already satisfied' not in argparse_output.stdout"
 
-  - name: install argparse 
-    pip:
-      name: argparse
-
-  - name: Install cs2modrewrite
-    ansible.builtin.git:
-      repo: "https://github.com/threatexpress/cs2modrewrite.git"
-      dest: '{{playbook_dir}}/cs2modrewrite.py'
+- name: Install cs2modrewrite
+  ansible.builtin.git:
+    repo: "https://github.com/threatexpress/cs2modrewrite.git"
+    dest: '{{ playbook_dir }}/tools/cs2modrewrite'
+    version: master
