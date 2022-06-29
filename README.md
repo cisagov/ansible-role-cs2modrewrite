@@ -4,7 +4,7 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/skeleton-ansible-role.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-ansible-role/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/skeleton-ansible-role.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-ansible-role/context:python)
 
-This Ansible role for installing [cs2modrewrite](https://github.com/threatexpress/cs2modrewrite/blob/master/cs2modrewrite.py).
+This Ansible role for downloading [cs2modrewrite](https://github.com/threatexpress/cs2modrewrite/blob/master/cs2modrewrite.py).
 
 ## Requirements ##
 
@@ -23,7 +23,7 @@ None.
 
 ## Dependencies ##
 
-- [cisagov/ansible-role-pip](https://github.com/cisagov/ansible-role-pip)
+None.
 
 ## Example Playbook ##
 
@@ -57,4 +57,4 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
-Declan Murphy - <declan.murphy@cisa.dhs.gov>
+Heather Fetty - <heather.fetty@cisa.dhs.gov>
