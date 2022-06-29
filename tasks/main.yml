@@ -1,9 +1,10 @@
 ---
-- name: Install git
+#tasks file for cs2modrewrite
+- name: Install unarchive dependencies
   ansible.builtin.package:
-    name: git
-    state: present
-    update_cache: yes
+    name:
+    - unzip
+    - tar
 
 - name: Install argparse
   ansible.builtin.pip:
@@ -11,8 +12,17 @@
   register: argparse_output
   changed_when: "'Using cached argparse' not in argparse_output.stdout and 'Requirement already satisfied' not in argparse_output.stdout"
 
-- name: Install cs2modrewrite
-  ansible.builtin.git:
-    repo: "https://github.com/threatexpress/cs2modrewrite.git"
-    dest: '{{ playbook_dir }}/tools/cs2modrewrite'
-    version: master
+- name: Create the /tools/cs2modrewrite directory
+  ansible.builtin.file:
+    mode: 0755
+    path: /tools/cs2modrewrite
+    state: directory
+
+- name: Download and untar the cs2modrewrite tarball
+  ansible.builtin.unarchive:
+    src: https://github.com/threatexpress/cs2modrewrite/tarball/master
+    dest: /tools/cs2modrewrite
+    remote_src: yes
+    extra_opts:
+      - "--strip-components=1"
+    creates: /tools/cs2modrewrite/cs2modrewrite.py
