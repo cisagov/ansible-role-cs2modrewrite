@@ -1,8 +1,8 @@
 # ansible-role-cs2modrewrite #
 
-[![GitHub Build Status](https://github.com/cisagov/skeleton-ansible-role/workflows/build/badge.svg)](https://github.com/cisagov/skeleton-ansible-role/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/skeleton-ansible-role.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-ansible-role/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/skeleton-ansible-role.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/skeleton-ansible-role/context:python)
+[![GitHub Build Status](https://github.com/xvxd4sh/ansible-role-cs2modrewrite/workflows/build/badge.svg)](https://github.com/xvxd4sh/ansible-role-cs2modrewrite/actions)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/xvxd4sh/ansible-role-cs2modrewrite.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvxd4sh/ansible-role-cs2modrewrite/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/xvxd4sh/ansible-role-cs2modrewrite.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvxd4sh/ansible-role-cs2modrewrite/context:python)
 
 This Ansible role for downloading [cs2modrewrite](https://github.com/threatexpress/cs2modrewrite/blob/master/cs2modrewrite.py).
 
