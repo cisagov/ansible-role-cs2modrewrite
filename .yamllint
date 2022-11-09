@@ -46,7 +46,11 @@ rules:
     allow-non-breakable-inline-mappings: true
     # Allows a 10% overage from the default limit of 80
     max: 88
+<<<<<<< HEAD
 >>>>>>> c4fbf2093c51a86ac2af234fa52b7f94526d3cb7
+=======
+
+>>>>>>> e803e1ac48ea53dc766d05935fbc38d2f4ad385e
   # yamllint doesn't like when we use yes and no for true and false,
   # but that's pretty standard in Ansible.
   truthy: disable
