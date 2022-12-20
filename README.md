@@ -1,8 +1,7 @@
 # ansible-role-cs2modrewrite #
 
-[![GitHub Build Status](https://github.com/xvxd4sh/ansible-role-cs2modrewrite/workflows/build/badge.svg)](https://github.com/xvxd4sh/ansible-role-cs2modrewrite/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/xvxd4sh/ansible-role-cs2modrewrite.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvxd4sh/ansible-role-cs2modrewrite/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/xvxd4sh/ansible-role-cs2modrewrite.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvxd4sh/ansible-role-cs2modrewrite/context:python)
+[![GitHub Build Status](https://github.com/cisagov/ansible-role-cs2modrewrite/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-cs2modrewrite/actions)
+[![CodeQL](https://github.com/cisagov/ansible-role-cs2modrewrite/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-cs2modrewrite/actions/workflows/codeql-analysis.yml)
 
 This Ansible role for downloading [cs2modrewrite](https://github.com/threatexpress/cs2modrewrite/blob/master/cs2modrewrite.py).
 
@@ -33,8 +32,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - cs2modrewrite
+  tasks:
+    - name: Install the cs2modrewrite tool
+      ansible.builtin.include_role:
+        name: cs2modrewrite
 ```
 
 ## Contributing ##
