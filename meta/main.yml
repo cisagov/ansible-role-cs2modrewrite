@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: Heather Fetty
-  description: Cs2modrewrite Ansible role
   company: CISA Cyber Assessments
+  description: Cs2modrewrite Ansible role
   galaxy_tags:
     - cs2modrewrite
   license: CC0
@@ -14,28 +15,23 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
-    - name: Amazon Linux 2
+    - name: Amazon Linux
       versions:
-        - any
+        - "2023"
     - name: Debian
       versions:
-        - stretch
         - buster
         - bullseye
-        # Kali linux isn't an option here, but it is based on
-        # Debian Testing:
-        # https://www.kali.org/docs/policy/kali-linux-relationship-with-debian
         - bookworm
     - name: Fedora
       versions:
-        - "35"
-        - "36"
         - "37"
+        - "38"
+    - name: Kali
+      versions:
+        - "2023"
     - name: Ubuntu
       versions:
-        - bionic
         - focal
         - jammy
   role_name: cs2modrewrite
-
-dependencies: []
